@@ -76,6 +76,20 @@ blog-demo/
 └── public/               # Generated static files (git-ignored)
 ```
 
+## 本地文件说明
+```
+node_modules：依赖包
+scaffolds：生成文章的一些模板
+source：用来存放你的文章
+themes：主题
+.npmignore：发布时忽略的文件（可忽略）
+_config.landscape.yml：主题的配置文件
+config.yml：博客的配置文件
+package.json：项目名称、描述、版本、运行和开发等信
+
+```
+
+
 ## Configuration Files
 
 ### _config.yml (Main Configuration)
@@ -138,3 +152,5 @@ Hexo uses generator plugins to create pages:
 - Default theme: landscape
 - Syntax highlighter: highlight.js
 - Pagination: 10 posts per page
+
+

@@ -154,3 +154,34 @@ Hexo uses generator plugins to create pages:
 - Pagination: 10 posts per page
 
 
+
+# 美化主题部分
+## 1.主题美化
+
+- 在博客根目录里安装最新版主题：
+- git clone -b main https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu
+- 第一次使用需要安装 pug 以及 stylus 的渲染器：
+- npm install hexo-renderer-pug hexo-renderer-stylus --save
+
+## 2.应用主题
+
+- 修改 hexo 配置文件_config.yml，把主题改为anzhiyu：
+- theme: anzhiyu
+
+## 3.覆盖配置
+
+- 覆盖配置可以使主题配置放置在 anzhiyu 目录之外，避免在更新主题时丢失自定义的配置。
+- 复制anzhiyu主题配置文件：
+- cp -rf ./themes/anzhiyu/_config.yml ./_config.anzhiyu.yml
+- 说明：注意：
+- 只要存在于 _config.anzhiyu.yml 的配置都是高优先级，修改原 _config.yml 是无效的。
+- 每次更新主题可能存在配置变更，请注意更新说明，可能需要手动对 _config.anzhiyu.yml 同步修改。
+- 想查看覆盖配置有没有生效，可以通过 hexo g --debug 查看命令行输出。
+- 如果想将某些配置覆盖为空，注意不要把主键删掉，不然是无法覆盖的
+
+## 4.配置主题与主站配置文件
+
+- 本地预览：
+- hexo cl; hexo s
+- 推送更新上线：
+- hexo cl; hexo g; hexo d

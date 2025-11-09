@@ -185,3 +185,19 @@ Hexo uses generator plugins to create pages:
 - hexo cl; hexo s
 - 推送更新上线：
 - hexo cl; hexo g; hexo d
+
+# 2.生成标签，配置页面和提交模板
+
+## 1.执行以下命令生成标签页
+- hexo new page tags
+
+## 2.找到 source/tags/index.md 这个文件，修改添加 type: "tags"
+- 内容可查看相关文件
+
+## 3.执行以下命令生成分类页
+- 内容可查看相关文件
+
+## 4.配置文章模版
+- /scaffolds目录下有几个模版文件，其中：
+- post.md：新建博文模版，详情文件
+- page.md：新建标签页模版，详见文件
